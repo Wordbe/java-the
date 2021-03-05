@@ -1,6 +1,8 @@
 package com.wordbe.java8to11;
 
 import com.wordbe.java8to11.functionalInterface.greet.Greeting;
+import com.wordbe.java8to11.functionalInterface.interfaces.BookInterface;
+import com.wordbe.java8to11.functionalInterface.interfaces.BookInterfaceImpl;
 
 import java.util.Arrays;
 import java.util.function.*;
@@ -8,7 +10,11 @@ import java.util.function.*;
 public class Application {
 
     public static void main(String[] args) {
-        methodReference();
+        BookInterface.printHelp();
+
+        BookInterfaceImpl jack = new BookInterfaceImpl("jack");
+        jack.printName();
+        jack.printNameUpperCase();
     }
 
     private static void methodReference() {
