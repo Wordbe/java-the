@@ -10,6 +10,10 @@ import java.util.function.*;
 public class Application {
 
     public static void main(String[] args) {
+
+    }
+
+    private static void java8method() {
         List<String> names = new ArrayList<>();
         names.add("red");
         names.add("blue");
@@ -17,7 +21,6 @@ public class Application {
         names.add("brown");
 
         names.forEach(System.out::println);
-
     }
 
     private static void interfaceExample() {
