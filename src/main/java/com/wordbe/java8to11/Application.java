@@ -10,6 +10,10 @@ import java.util.function.*;
 public class Application {
 
     public static void main(String[] args) {
+
+    }
+
+    private static void interfaceExample() {
         BookInterface.printHelp();
 
         BookInterfaceImpl jack = new BookInterfaceImpl("jack");
