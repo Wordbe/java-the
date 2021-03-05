@@ -4,12 +4,19 @@ import com.wordbe.java8to11.functionalInterface.greet.Greeting;
 import com.wordbe.java8to11.functionalInterface.interfaces.BookInterface;
 import com.wordbe.java8to11.functionalInterface.interfaces.BookInterfaceImpl;
 
-import java.util.Arrays;
+import java.util.*;
 import java.util.function.*;
 
 public class Application {
 
     public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("red");
+        names.add("blue");
+        names.add("orange");
+        names.add("brown");
+
+        names.forEach(System.out::println);
 
     }
 
