@@ -6,11 +6,13 @@ import com.wordbe.java8to11.functionalInterface.interfaces.BookInterfaceImpl;
 
 import java.util.*;
 import java.util.function.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Application {
 
     public static void main(String[] args) {
-
+        java8method();
     }
 
     private static void java8method() {
@@ -20,7 +22,11 @@ public class Application {
         names.add("orange");
         names.add("brown");
 
-        names.forEach(System.out::println);
+        List<Object> collect = names.parallelStream().map(s -> {
+            System.out.println(s + " " + Thread.currentThread().getName());
+            return s.toUpperCase();
+        }).collect(Collectors.toList());
+        collect.forEach(System.out::println);
     }
 
     private static void interfaceExample() {
