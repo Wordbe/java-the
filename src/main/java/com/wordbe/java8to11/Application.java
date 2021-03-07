@@ -3,7 +3,10 @@ package com.wordbe.java8to11;
 import com.wordbe.java8to11.functionalInterface.greet.Greeting;
 import com.wordbe.java8to11.functionalInterface.interfaces.BookInterface;
 import com.wordbe.java8to11.functionalInterface.interfaces.BookInterfaceImpl;
+import com.wordbe.java8to11.functionalInterface.lecture.Lecture;
+import com.wordbe.java8to11.functionalInterface.lecture.Progress;
 
+import java.time.Duration;
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.Collectors;
@@ -12,7 +15,41 @@ import java.util.stream.Stream;
 public class Application {
 
     public static void main(String[] args) {
-        java8method();
+
+
+
+    }
+
+    private static void optionalExample() {
+        List<Lecture> springLecture = new ArrayList<>();
+        springLecture.add(new Lecture(1, "stock", true));
+        springLecture.add(new Lecture(2, "fixed income", true));
+        springLecture.add(new Lecture(3, "future", false));
+        springLecture.add(new Lecture(4, "option", false));
+        springLecture.add(new Lecture(5, "currency", true));
+
+        Lecture stock = new Lecture(1, "stock", true);
+        System.out.println(stock.getProgress());
+
+        // ------------------------------------------
+        Optional<Lecture> optional = springLecture.stream()
+                .filter(lecture -> lecture.getTitle().startsWith("apple"))
+                .findFirst();
+
+        Optional<Progress> progress = optional.flatMap(Lecture::getProgress);
+
+        Optional<Optional<Progress>> progress1 = optional.map(Lecture::getProgress);
+        Optional<Progress> progress2 = progress1.orElse(Optional.empty());
+    }
+
+    private static Lecture createNewClass() {
+        return new Lecture(10, "apple", false);
+    }
+
+    private static void streamExample() {
+        Optional<Integer> reduce = Stream.iterate(0, i -> i + 1).limit(10)
+                .reduce((t, i) -> t + i);
+        reduce.ifPresent(System.out::println);
     }
 
     private static void java8method() {
