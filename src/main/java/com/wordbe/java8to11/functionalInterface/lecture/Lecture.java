@@ -1,6 +1,5 @@
 package com.wordbe.java8to11.functionalInterface.lecture;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
