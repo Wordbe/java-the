@@ -1,4 +1,4 @@
-package com.wordbe.java8to11.functionalInterface.greet;
+package com.wordbe.java8to11.greet;
 
 public class Greeting {
 

@@ -1,15 +1,30 @@
 package com.wordbe.java8to11;
 
-import java.util.Arrays;
-import java.util.List;
+import com.wordbe.java8to11.person.Cap;
+import com.wordbe.java8to11.person.CapContainer;
+import com.wordbe.java8to11.person.Person;
+import jdk.jfr.Percentage;
+
+import javax.xml.transform.sax.SAXResult;
+import java.util.*;
 import java.util.concurrent.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+@Cap
 public class Application {
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
+    public static void main(String[] args) throws @Cap RuntimeException {
 
+    }
+
+    static class BlueCap<@Cap T> {
+        private @Cap String name;
+
+        public static <@Cap C> void print(@Cap C c) {
+            System.out.println(c);
+        }
     }
 
     private static void completableFutureExample2() throws InterruptedException, ExecutionException {

@@ -1,10 +1,10 @@
-package com.wordbe.java8to11.functionalInterface.methods;
+package com.wordbe.java8to11.methods;
 
-import com.wordbe.java8to11.functionalInterface.greet.Greeting;
-import com.wordbe.java8to11.functionalInterface.interfaces.BookInterface;
-import com.wordbe.java8to11.functionalInterface.interfaces.BookInterfaceImpl;
-import com.wordbe.java8to11.functionalInterface.lecture.Lecture;
-import com.wordbe.java8to11.functionalInterface.lecture.Progress;
+import com.wordbe.java8to11.greet.Greeting;
+import com.wordbe.java8to11.interfaces.BookInterface;
+import com.wordbe.java8to11.interfaces.BookInterfaceImpl;
+import com.wordbe.java8to11.lecture.Lecture;
+import com.wordbe.java8to11.lecture.Progress;
 
 import java.util.ArrayList;
 import java.util.Arrays;

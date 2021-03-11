@@ -1,4 +1,4 @@
-package com.wordbe.java8to11.functionalInterface.lecture;
+package com.wordbe.java8to11.lecture;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.wordbe.java8to11.functionalInterface.interfaces;
+package com.wordbe.java8to11.interfaces;
 
 public class Impl implements Foo, Bar{
 

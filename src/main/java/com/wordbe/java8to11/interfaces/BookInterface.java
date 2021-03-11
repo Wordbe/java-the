@@ -1,6 +1,4 @@
-package com.wordbe.java8to11.functionalInterface.interfaces;
-
-import java.util.Locale;
+package com.wordbe.java8to11.interfaces;
 
 public interface BookInterface {
 
