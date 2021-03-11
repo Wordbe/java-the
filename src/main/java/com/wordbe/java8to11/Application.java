@@ -1,22 +1,29 @@
 package com.wordbe.java8to11;
 
 import com.wordbe.java8to11.person.Cap;
-import com.wordbe.java8to11.person.CapContainer;
-import com.wordbe.java8to11.person.Person;
-import jdk.jfr.Percentage;
 
-import javax.xml.transform.sax.SAXResult;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 import java.util.concurrent.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.stream.IntStream;
 
-@Cap
 public class Application {
 
-    public static void main(String[] args) throws @Cap RuntimeException {
+    public static void main(String[] args) {
+        int size = 2000;
+        int[] numbers = new int[size];
+        Random random = new Random();
+        IntStream.range(0, size).forEach(i -> numbers[i] = random.nextInt());
 
+        long start = System.nanoTime();
+        Arrays.sort(numbers);
+        System.out.println("Serial sorting: " + (System.nanoTime() - start));
+
+        IntStream.range(0, size).forEach(i -> numbers[i] = random.nextInt());
+        start = System.nanoTime();
+        Arrays.parallelSort(numbers);
+        System.out.println("Parallel sorting: " + (System.nanoTime() - start));
     }
 
     static class BlueCap<@Cap T> {
