@@ -2,15 +2,63 @@ package com.wordbe.java8to11;
 
 import com.wordbe.java8to11.person.Cap;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.lang.reflect.Array;
+import java.util.*;
 import java.util.concurrent.*;
 import java.util.stream.IntStream;
 
 public class Application {
 
     public static void main(String[] args) {
+
+    }
+
+    public static int solution(int[]A){
+
+        HashSet<Integer> setA = new HashSet<>();
+
+        int ans = 0;
+        for(int i=0;i<A.length;i++){
+            if(A[i] != 0){
+                if(setA.contains(-A[i])){
+                    ans = Math.max(Math.abs(A[i]), ans);
+                }
+                setA.add(A[i]);
+            }
+        }
+        return ans;
+    }
+
+    public static int[]solution1(String[]S){
+        int M = S[0].length();
+        int[] ans = new int[3];
+        boolean isFoundPair = false;
+
+        for(int i=0;i<S.length;i++){
+            for(int j=i+1;j<S.length;j++){
+
+                for(int k=0;k<M;k++){
+                    if(S[i].charAt(k)==S[j].charAt(k)){
+                        ans[0]=i;
+                        ans[1]=j;
+                        ans[2]=k;
+                        isFoundPair=true;
+                        break;
+                    }
+                }
+
+                if(isFoundPair)break;
+            }
+            if(isFoundPair)break;
+        }
+
+        if(!isFoundPair){
+            return new int[]{};
+        }
+        return ans;
+    }
+
+    private static void sortVsParallelSort() {
         int size = 2000;
         int[] numbers = new int[size];
         Random random = new Random();
