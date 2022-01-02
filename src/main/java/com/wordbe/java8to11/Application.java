@@ -1,7 +1,10 @@
 package com.wordbe.java8to11;
 
+import com.opencsv.exceptions.CsvException;
 import com.wordbe.java8to11.person.Cap;
+import com.wordbe.java8to11.stream.*;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -11,8 +14,33 @@ import java.util.stream.IntStream;
 
 public class Application {
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws IOException, CsvException {
+//        Quiz1 quiz1 = new Quiz1();
+//        quiz1.quiz1();
+//        quiz1.quiz2();
+//        quiz1.quiz3();
+//        Quiz2 quiz2 = new Quiz2();
+//        quiz2.quiz1();
+//        quiz2.quiz2();
+//        Quiz3 quiz3 = new Quiz3();
+//        quiz3.quiz1();
+//        quiz3.quiz2();
+//        Quiz4 quiz4 = new Quiz4();
+//        quiz4.quiz1();
+//        quiz4.quiz2();
+//        quiz4.quiz3();
+//        quiz4.quiz4();
+//        quiz4.quiz5();
+//        quiz4.quiz6();
+//        quiz4.quiz7();
+//        Quiz5 quiz5 = new Quiz5();
+//        quiz5.quiz1();
+//        quiz5.quiz2();
+//        quiz5.quiz3();
+//        quiz5.quiz4();
+        Quiz6 quiz6 = new Quiz6();
+//        quiz6.quiz1();
+        quiz6.quiz2();
     }
 
     public static int solution(int[]A){
