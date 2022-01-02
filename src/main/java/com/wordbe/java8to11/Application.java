@@ -2,8 +2,10 @@ package com.wordbe.java8to11;
 
 import com.wordbe.java8to11.person.Cap;
 
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Random;
 import java.util.concurrent.*;
 import java.util.stream.IntStream;
 
